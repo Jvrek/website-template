@@ -9,7 +9,7 @@ module.exports = {
     clean: true,
     filename: './js/app.js',
   },
-    module: {
+  module: {
     rules: [
       {
         test: /\.scss$/,
