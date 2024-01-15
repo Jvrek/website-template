@@ -16,10 +16,123 @@ html {
   font-size: 1em;
   line-height: 1.4;
 }
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
 
 body {
-  margin: 0 auto;
+  background-color: #f4f4f4;
 }
+
+header {
+  /* background-color: #fff; */
+  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.1);
+}
+
+nav {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 1em;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  margin-left: auto;
+}
+
+.menu li {
+  margin: 0 1em;
+}
+
+.menu a {
+  text-decoration: none;
+  color: #333;
+  font-size: 1rem;
+  transition: color 0.3s ease;
+}
+
+.menu a:hover,
+.menu a:focus {
+  color: #007bff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .menu {
+    display: block;
+    text-align: center;
+  }
+
+  .menu li {
+    margin: 0.5em 0;
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu li {
+    margin-right: 10px; /* Smaller margin on smaller screens */
+  }
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .menu li {
+    margin: 0 5px; /* Smaller margin on smaller screens */
+  }
+}
+
+
+.header-top .info-bar {
+  background-color: rgba(255, 255, 255, 0.5); /* Translucent white */
+  /* text-align: center; */
+  /* padding: 10px 0; */
+
+  overflow: hidden;
+  animation: scroll-left 6s linear infinite;
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+
+.hero-image {
+  background-image: url('/img/woman-hairdresser-salon.jpg'); /* Add your high-quality image here */
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.header-top .info-content {
+  display: inline-block;
+  white-space: nowrap;
+  will-change: transform; /* Optimize for animation */
+}
+
 
 /*
  * Remove text-shadow in selection highlight:
