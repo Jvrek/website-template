@@ -10,15 +10,22 @@
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
   color: #222;
   font-size: 1em;
   line-height: 1.4;
 }
 
+/* Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
 body {
-  margin: 0 auto;
+  background-color: #f4f4f4;
 }
 
 /*
@@ -247,4 +254,18 @@ textarea {
   h3 {
     page-break-after: avoid;
   }
+}
+
+//custom
+ul {
+  list-style: none;
+}
+
+a,
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
 }

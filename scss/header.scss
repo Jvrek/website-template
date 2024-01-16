@@ -1,0 +1,44 @@
+@import 'variables.scss';
+
+header {
+  position: relative;
+  height: 100svh;
+  width: 100%;
+  background-image: url('/img/woman-hairdresser-salon.jpg');
+  background-size: cover;
+  background-position: center;
+
+  .header-top {
+    background-color: $light-gray-transparent;
+    padding: 10px 0;
+  }
+
+  nav {
+    background-color: $white-transparent;
+
+    .menu {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      padding: 20px;
+    }
+  }
+
+  .header-text-container {
+    position: relative;
+    height: 80%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h1 {
+      color: $header-text-color;
+    }
+
+    h2 {
+      color: $header-subtext-color;
+    }
+  }
+}
