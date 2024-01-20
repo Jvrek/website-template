@@ -1,39 +1,38 @@
-body, html {
-    height: 100%;
-    margin: 0;
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
 .content {
-    min-height: calc(100% - 50px); // Adjust 50px to the height of your footer
-    /* Rest of your content styles */
+  min-height: calc(100% - 50px); // Adjust 50px to the height of your footer
+  /* Rest of your content styles */
 }
 
 footer {
-    font-family: 'Reason Regular', sans-serif;
+  font-family: 'Reason Regular', sans-serif;
 
-    width: 100%;
-    min-height: 20vh;
-    background-color: #333; // Footer background color
-    color: white; // Footer text color
-    // text-align: center;
-    padding: 10px 0;
+  width: 100%;
+  min-height: 20vh;
+  background-color: #333; // Footer background color
+  color: white; // Footer text color
+  // text-align: center;
+  padding: 10px 0;
 
-    .menu{
+  .menu {
     text-align: center;
 
     display: flex;
     justify-content: center;
     gap: 42px;
-    }
-    p {
-        margin: 0; // Removes the default margin from <p>
-    }
+  }
+  p {
+    margin: 0; // Removes the default margin from <p>
+  }
 
-    .copyright{
-
+  .copyright {
     text-align: center;
-
-    }
+  }
 }
 // .test-box {
 //     background-color: red;
@@ -48,4 +47,3 @@ footer {
 //     font-weight: normal;
 //     font-style: normal;
 //   }
-  
