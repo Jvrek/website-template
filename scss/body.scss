@@ -1,19 +1,20 @@
-body, html {
-    height: 100%;
-    margin: 0;
+body,
+html {
+  height: 100%;
+  margin: 0;
 }
 
 body {
-    /* Set the background image */
-    background-image: url('/img/woman-hairdresser-salon.jpg');
+  /* Set the background image */
+  background-image: url('/img/woman-hairdresser-salon.jpg');
 
-    /* Make sure the image covers the entire page */
-    background-position: center;
-background-repeat: no-repeat;
-    background-size: cover;
+  /* Make sure the image covers the entire page */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-    /* Optional: Adding a background color as a fallback */
-    background-color: #cccccc;
+  /* Optional: Adding a background color as a fallback */
+  background-color: #cccccc;
 }
 
 // FREE LICENSE ADD IT TO THE CODE!!!!!!
