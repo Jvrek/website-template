@@ -1,0 +1,13 @@
+
+.moving-info-bar {
+    background-color: #000000;  // Black background
+    color: white;               // White text for contrast
+    padding: 10px;              // Some padding around the text
+    overflow: hidden;           // Hide the overflow
+    white-space: nowrap;        // Keep the text in one line
+    position: fixed;
+    left: 0;
+    bottom: 0;                     // Stick to the top of the viewport
+    width: 100%;
+    z-index: 1000;   
+  }
