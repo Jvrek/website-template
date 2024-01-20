@@ -14,13 +14,24 @@ header {
   }
 
   nav {
-    background-color: $white-transparent;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 70px;
+    border-bottom: 1px #dfdfdf solid;
+
+    .logo {
+      img {
+        width: 140px;
+      }
+    }
 
     .menu {
       display: flex;
       justify-content: center;
       gap: 20px;
       padding: 20px;
+      color: $white;
     }
   }
 

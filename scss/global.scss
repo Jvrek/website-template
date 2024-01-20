@@ -1,0 +1,33 @@
+.round-border {
+  border-radius: 15px;
+}
+
+.cta-button {
+  padding: 10px 20px; // Adjust padding as needed
+  background-color: #5d1049; // A modern color, you can adjust this
+  color: white; // Text color
+  border: none; // No border for a modern look
+  border-radius: 25px; // Slightly rounded corners
+  font-size: 1em; // Adjust font size as needed
+  font-weight: bold; // Bold text
+  cursor: pointer; // Cursor changes to indicate button
+  transition:
+    background-color 0.3s,
+    transform 0.3s; // Smooth transition for hover effects
+
+  &:hover {
+    background-color: lighten(
+      #5d1049,
+      10%
+    ); // Lightens the button color on hover
+    transform: translateY(-2px); // Slight raise effect on hover
+  }
+
+  &:active {
+    transform: translateY(1px); // Pushes the button down on click
+  }
+
+  &:focus {
+    outline: none; // Removes outline to maintain modern aesthetics
+  }
+}
