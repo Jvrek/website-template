@@ -1,27 +1,64 @@
 @import 'variables.scss';
 
 header {
-  position: relative;
-  height: 100svh;
-  width: 100%;
-  background-image: url('/img/woman-hairdresser-salon.jpg');
-  background-size: cover;
-  background-position: center;
+  height: 80%;
+  color: white; // Set default text color to white for all text within header
+  font-family: 'Roboto', sans-serif; // Modern font family
 
   .header-top {
-    background-color: $light-gray-transparent;
+    background-color: rgba($light-gray-transparent, 0); // $light-gray-transparent;
     padding: 10px 0;
+    border-bottom: 1.5px solid rgb(225, 225, 225, .8); // White line border at the bottom
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.3); // Shadow only on the bottom
   }
 
   nav {
-    background-color: $white-transparent;
-
+    background-color: transparent; // Make nav background completely transparent
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1.5px solid rgb(225, 225, 225, .8); // White line border at the bottom
+    box-shadow: 0px 5px 10px rgba(255, 255, 255, 0.3); // Shadow only on the bottom
+    padding-left: 80px;
+    padding-right: 80px;
+    
+    .logo {
+      margin-right: 450px;
+      display: flex;
+    }
+  
     .menu {
       display: flex;
-      justify-content: center;
       gap: 20px;
       padding: 20px;
+      color: white; // Set text color to white
+      font-size: 1.2em; // Increase font size for menu items
+
     }
+    .book-appointment-button {
+      padding: 10px 20px; // Adjust padding as needed
+      background-color: #5D1049; // A modern color, you can adjust this
+      color: white; // Text color
+      border: none; // No border for a modern look
+      border-radius: 25px; // Slightly rounded corners
+      font-size: 1em; // Adjust font size as needed
+      font-weight: bold; // Bold text
+      cursor: pointer; // Cursor changes to indicate button
+      transition: background-color 0.3s, transform 0.3s; // Smooth transition for hover effects
+    
+      &:hover {
+        background-color: lighten(#5D1049, 10%); // Lightens the button color on hover
+        transform: translateY(-2px); // Slight raise effect on hover
+      }
+    
+      &:active {
+        transform: translateY(1px); // Pushes the button down on click
+      }
+    
+      &:focus {
+        outline: none; // Removes outline to maintain modern aesthetics
+      }
+    }
+    
   }
 
   .header-text-container {
@@ -40,5 +77,42 @@ header {
     h2 {
       color: $header-subtext-color;
     }
+    
+  }
+
+
+  .header-image img {
+    display: flex;
+    max-height: 370px; /* Adjust this value as needed */
+    width: auto; /* Maintain the aspect ratio */
+  }
+  .info-content{
+  font-family: 'Roboto', sans-serif; // Modern font family
+  font-size: 1.2em; // Increase font size for menu items
+  }
+  .book-appointment-button {
+    padding: 10px 20px; // Adjust padding as needed
+    background-color: #5D1049; // A modern color, you can adjust this
+    color: white; // Text color
+    border: none; // No border for a modern look
+    border-radius: 25px; // Slightly rounded corners
+    font-size: 1em; // Adjust font size as needed
+    font-weight: bold; // Bold text
+    cursor: pointer; // Cursor changes to indicate button
+    transition: background-color 0.3s, transform 0.3s; // Smooth transition for hover effects
+  
+    &:hover {
+      background-color: lighten(#5D1049, 10%); // Lightens the button color on hover
+      transform: translateY(-2px); // Slight raise effect on hover
+    }
+  
+    &:active {
+      transform: translateY(1px); // Pushes the button down on click
+    }
+  
+    &:focus {
+      outline: none; // Removes outline to maintain modern aesthetics
+    }
   }
 }
+
