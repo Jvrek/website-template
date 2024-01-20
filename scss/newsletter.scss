@@ -1,40 +1,39 @@
 .newsletter-sticky {
-    position: fixed;  // This makes the box sticky
-    right: 10px;      // Positions the box 10px from the right edge
-    bottom: 10px;     // Positions the box 10px from the bottom edge
-    width: 300px;     // Adjust the width as needed
-    padding: 15px;
-    background-color: white;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-    z-index: 1000;    // Ensure it's above other elements
-  
-    h3 {
-      margin-top: 0;
+  position: fixed; // This makes the box sticky
+  right: 10px; // Positions the box 10px from the right edge
+  bottom: 10px; // Positions the box 10px from the bottom edge
+  width: 300px; // Adjust the width as needed
+  padding: 15px;
+  background-color: white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1000; // Ensure it's above other elements
+
+  h3 {
+    margin-top: 0;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+
+    input {
+      margin-bottom: 10px;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
     }
-  
-    form {
-      display: flex;
-      flex-direction: column;
-  
-      input {
-        margin-bottom: 10px;
-        padding: 10px;
-        border: 1px solid #ddd;
-        border-radius: 4px;
-      }
-  
-      button {
-        padding: 10px;
-        border: none;
-        border-radius: 4px;
-        background-color: #007bff;
-        color: white;
-        cursor: pointer;
-  
-        &:hover {
-          background-color: #0056b3;
-        }
+
+    button {
+      padding: 10px;
+      border: none;
+      border-radius: 4px;
+      background-color: #007bff;
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        background-color: #0056b3;
       }
     }
   }
-  
+}

@@ -1,49 +1,48 @@
 .effects-img .image-container {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-  }
-  
-  .effects-img img {
-    display: block;
-    width: 100%;
-    transition: filter 0.5s ease;
-  }
-  
-  .effects-img .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0);
-    width: 100%;
-    height: 100%;
-    transition: background-color 0.5s ease;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    opacity: 0;
-    transition: opacity 0.5s ease;
-  }
-  
-  .effects-img .image-container:hover img {
-    filter: brightness(50%);
-  }
-  
-  .effects-img .image-container:hover .overlay {
-    opacity: 1;
-    background-color: rgba(0, 0, 0, 0.5);
-  }
-  
-  .effects-img .text {
-    color: white;
-    margin: 0px;
-    text-align: center;
-  }
-  
-  .effects-img .btn {
-    /* Add button styling here */
-  }
-  
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.effects-img img {
+  display: block;
+  width: 100%;
+  transition: filter 0.5s ease;
+}
+
+.effects-img .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0);
+  width: 100%;
+  height: 100%;
+  transition: background-color 0.5s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+.effects-img .image-container:hover img {
+  filter: brightness(50%);
+}
+
+.effects-img .image-container:hover .overlay {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.effects-img .text {
+  color: white;
+  margin: 0px;
+  text-align: center;
+}
+
+.effects-img .btn {
+  /* Add button styling here */
+}
