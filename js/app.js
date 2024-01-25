@@ -6,7 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
   if (menuIcon) {
     menuIcon.addEventListener('click', () => {
-      this.classList.toggle('is-active');
+      menuIcon.classList.toggle('is-active');
       menu.classList.toggle('is-active');
     });
   }
