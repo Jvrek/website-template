@@ -6,6 +6,22 @@
   max-width: 1200px;
 }
 
+.wrap-xl {
+  max-width: 1425px;
+}
+
+.full-width-wrap {
+  width: 100%;
+  .row-no-padding {
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .row-no-padding > * {
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 .cta-button {
   padding: 10px 20px; // Adjust padding as needed
   background-color: #5d1049; // A modern color, you can adjust this
