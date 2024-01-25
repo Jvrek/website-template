@@ -1,74 +1,72 @@
 #about-us {
-    font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern, clean font */
-    color: #333; /* Dark grey for text */
-    background-color: #fff; /* White background */
-    padding: 40px 0; /* Padding around the section */
-  
-    .hairdresser-text {
-        text-align: left;
-      }
-    
-      .beautycian-text {
-        text-align: right;
-      }
-      .main-bar{
-        color: #888;
-        display: table;
-        font-family: sans-serif;
-        height: 100%;
-        text-align: center;
-        width: 100%;
-        font-size: 2em; 
-      }
+  font-family: 'Helvetica Neue', Arial, sans-serif; /* Modern, clean font */
+  color: #333; /* Dark grey for text */
+  background-color: #fff; /* White background */
+  padding: 40px 0; /* Padding around the section */
+
+  .hairdresser-text {
+    text-align: left;
+  }
+
+  .beautycian-text {
+    text-align: right;
+  }
+  .main-bar {
+    color: #888;
+    display: table;
+    font-family: sans-serif;
+    height: 100%;
+    text-align: center;
+    width: 100%;
+    font-size: 2em;
+  }
 }
 
+.wrap .row {
+  margin-bottom: 30px; /* Space between rows */
+}
 
-  
-  
-  .wrap .row {
-    margin-bottom: 30px; /* Space between rows */
-  }
-  
-  /* Column styling for consistent padding */
+/* Column styling for consistent padding */
+.wrap .col-xs-12 {
+  padding: 15px;
+}
+
+/* Styling for employee information */
+.employee-1,
+.employee-2 {
+  background-color: #f9f9f9; /* Light grey background */
+  border: 1px solid #eaeaea; /* Light border for definition */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
+  padding: 20px; /* Padding inside the boxes */
+  border-radius: 5px; /* Rounded corners */
+  margin-bottom: 20px; /* Bottom margin */
+}
+
+/* Image styling for a modern look */
+.wrap img {
+  max-width: 100%; /* Responsive images */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove inline spacing */
+  margin-top: 10px; /* Space above images */
+  border-radius: 5px; /* Rounded corners for images */
+}
+
+/* Special styling for the main text and contact sections */
+.hairdresser-main-text,
+.wrap .col-xs-12 > div:not(.employee-1):not(.employee-2) {
+  font-weight: bold; /* Bold font for emphasis */
+  // color: #007bff; /* Blue color for a modern touch */
+  text-transform: uppercase; /* Uppercase for a clean look */
+  margin-bottom: 10px; /* Bottom margin */
+}
+
+/* Responsive design adjustments */
+@media (max-width: 768px) {
   .wrap .col-xs-12 {
-    padding: 15px;
+    padding: 10px;
   }
-  
-  /* Styling for employee information */
-  .employee-1, .employee-2 {
-    background-color: #f9f9f9; /* Light grey background */
-    border: 1px solid #eaeaea; /* Light border for definition */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05); /* Subtle shadow */
-    padding: 20px; /* Padding inside the boxes */
-    border-radius: 5px; /* Rounded corners */
-    margin-bottom: 20px; /* Bottom margin */
+
+  .wrap .row {
+    margin-bottom: 20px;
   }
-  
-  /* Image styling for a modern look */
-  .wrap img {
-    max-width: 100%; /* Responsive images */
-    height: auto; /* Maintain aspect ratio */
-    display: block; /* Remove inline spacing */
-    margin-top: 10px; /* Space above images */
-    border-radius: 5px; /* Rounded corners for images */
-  }
-  
-  /* Special styling for the main text and contact sections */
-  .hairdresser-main-text, .wrap .col-xs-12 > div:not(.employee-1):not(.employee-2) {
-    font-weight: bold; /* Bold font for emphasis */
-    // color: #007bff; /* Blue color for a modern touch */
-    text-transform: uppercase; /* Uppercase for a clean look */
-    margin-bottom: 10px; /* Bottom margin */
-  }
-  
-  /* Responsive design adjustments */
-  @media (max-width: 768px) {
-    .wrap .col-xs-12 {
-      padding: 10px;
-    }
-  
-    .wrap .row {
-      margin-bottom: 20px;
-    }
-  }
-  
+}
