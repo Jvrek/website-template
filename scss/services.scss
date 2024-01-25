@@ -1,46 +1,111 @@
-/* Service Box Styling */
-.service-box {
-  background-color: $background-color;
-  flex: 0 0 calc(33.333% - 20px); /* Adjusted to account for margin */
-  margin: 10px; /* Increased margin for more separation */
-  padding: 40px;
-  text-align: center;
-  border-radius: 10px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-  transition:
-    transform 0.3s ease,
-    box-shadow 0.3s ease;
-  position: relative; /* For icon positioning */
-
-  .service-box:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+/* Ensuring the image takes full width and is 1/4th of the viewport height */
+  .svc-img img {
+    width: 100%;
+    height: 25vh; /* 1/4th of the viewport height */
+    object-fit: cover; /* Ensures the image covers the area without being stretched */
+    margin-bottom: -50px; // Overlap the image with the service boxes
   }
 
-  .service-box-icon {
-    width: 60px;
-    height: 60px;
-    background-color: #007bff; /* Accent color */
+  /* Position the service boxes to partially lay on the image */
+  .wrap {
+    position: relative; /* Set relative positioning for the parent */
+    margin-top: -50px; /* Adjust this value as needed to overlay the service boxes on the image */
+  }
+  
+  .service-box {
+    background: #fff;
+    padding: 20px;
+    margin: 0 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    
+    &:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    }
+  }
+
+  /* Additional styling for the main bar */
+  .main-bar {
+    text-align: center;
+    font-size: 24px;
+    padding: 20px 0;
+    background-color: #333;
     color: white;
-    border-radius: 50%;
+  }
+
+  /* Responsive grid adjustments for Bootstrap */
+  @media (max-width: 767px) {
+    .wrap {
+      margin-top: -25px; /* Smaller overlay for smaller devices */
+    }
+  }
+
+#services{
+
+  // tr th {
+  //   text-align: left;
+  //   padding: 5px 0;
+  // }
+
+  .service-description {
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .service-description {
+    color: #666;
+    margin-bottom: 20px;
+  }
+
+  .pricing-container {
+    margin: 0 auto;
+    max-width: 600px;
+  }
+
+  .pricing-item {
     display: flex;
     align-items: center;
-    justify-content: center;
-    font-size: 30px;
-    position: absolute;
-    top: -30px; /* Half outside the box */
-    left: calc(50% - 30px);
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-  }
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid $primary-color;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
 
-  .service-box h3 {
-    margin-top: 50px; /* Space for the icon */
-    color: #333;
-    margin: 20px auto;
-    bottom: 15px;
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    .service-name,
+    .service-price {
+      font-size: 1.25rem;
+      color: $primary-color;
+    }
+    .service-divider {
+      flex-grow: 1;
+      height: 1px;
+      background: linear-gradient(to right, transparent, $primary-color, transparent);
+      margin: 0 15px;
+    }
+  }  
+  
+// Animation
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
   }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 
-  .service-box p {
-    color: #666;
+// Animating each item with a slight delay
+@for $i from 1 through 10 {
+  .pricing-item:nth-child(#{$i}) {
+    animation-delay: $i * (0.1s);
   }
+}
 }
