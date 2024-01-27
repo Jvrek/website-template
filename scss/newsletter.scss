@@ -1,15 +1,31 @@
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-20px);
+  }
+  60% {
+    transform: translateY(-10px);
+  }
+}
+
 .newsletter-sticky {
-  position: fixed; // This makes the box sticky
-  right: 10px; // Positions the box 10px from the right edge
-  bottom: 10px; // Positions the box 10px from the bottom edge
-  width: 300px; // Adjust the width as needed
+  position: fixed;
+  right: 10px;
+  bottom: 50px;
+  width: 300px;
   padding: 15px;
   background-color: white;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  z-index: 1000; // Ensure it's above other elements
-
+  z-index: 1000;
+  border-radius: 8px;
+  animation: bounce 5s infinite; /* Bounce animation */
+  
   h3 {
     margin-top: 0;
+    font-size: 1.2em;
+    color: #333;
   }
 
   form {
@@ -30,6 +46,7 @@
       background-color: #007bff;
       color: white;
       cursor: pointer;
+      transition: background-color 0.3s ease;
 
       &:hover {
         background-color: #0056b3;
@@ -37,3 +54,4 @@
     }
   }
 }
+
