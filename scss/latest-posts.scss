@@ -1,16 +1,16 @@
-.effects-img .image-container {
+.latest-img .image-container {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
 
-.effects-img img {
+.latest-img img {
   display: block;
   width: 100%;
   transition: filter 0.5s ease;
 }
 
-.effects-img .overlay {
+.latest-img .overlay {
   position: absolute;
   top: 0;
   left: 0;
@@ -28,21 +28,21 @@
   transition: opacity 0.5s ease;
 }
 
-.effects-img .image-container:hover img {
+.latest-img .image-container:hover img {
   filter: brightness(50%);
 }
 
-.effects-img .image-container:hover .overlay {
+.latest-img .image-container:hover .overlay {
   opacity: 1;
   background-color: rgba(0, 0, 0, 0.5);
 }
 
-.effects-img .text {
+.latest-img .text {
   color: white;
   margin: 0px;
   text-align: center;
 }
 
-.effects-img .btn {
+.latest-img .btn {
   /* Add button styling here */
 }
