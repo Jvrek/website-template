@@ -1,50 +1,49 @@
 /* Ensuring the image takes full width and is 1/4th of the viewport height */
-  .svc-img img {
-    width: 100%;
-    height: 25vh; /* 1/4th of the viewport height */
-    object-fit: cover; /* Ensures the image covers the area without being stretched */
-    margin-bottom: -50px; // Overlap the image with the service boxes
-  }
+.svc-img img {
+  width: 100%;
+  height: 25vh; /* 1/4th of the viewport height */
+  object-fit: cover; /* Ensures the image covers the area without being stretched */
+  margin-bottom: -50px; // Overlap the image with the service boxes
+}
 
-  /* Position the service boxes to partially lay on the image */
+/* Position the service boxes to partially lay on the image */
+.wrap {
+  position: relative; /* Set relative positioning for the parent */
+  margin-top: -50px; /* Adjust this value as needed to overlay the service boxes on the image */
+}
+
+.service-box {
+  background: #fff;
+  padding: 20px;
+  // margin: 0 15px 30px;
+  border-radius: 8px;
+  width: 100%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Additional styling for the main bar */
+.main-bar {
+  text-align: center;
+  font-size: 24px;
+  padding: 20px 0;
+  background-color: #333;
+  color: white;
+}
+
+/* Responsive grid adjustments for Bootstrap */
+@media (max-width: 767px) {
   .wrap {
-    position: relative; /* Set relative positioning for the parent */
-    margin-top: -50px; /* Adjust this value as needed to overlay the service boxes on the image */
+    margin-top: -25px; /* Smaller overlay for smaller devices */
   }
-  
-  .service-box {
-    background: #fff;
-    padding: 20px;
-    // margin: 0 15px 30px;
-    border-radius: 8px;
-    width: 100%; 
-    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-    transition: all 0.3s ease;
-    
-    &:hover {
-      transform: translateY(-5px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    }
-  }
+}
 
-  /* Additional styling for the main bar */
-  .main-bar {
-    text-align: center;
-    font-size: 24px;
-    padding: 20px 0;
-    background-color: #333;
-    color: white;
-  }
-
-  /* Responsive grid adjustments for Bootstrap */
-  @media (max-width: 767px) {
-    .wrap {
-      margin-top: -25px; /* Smaller overlay for smaller devices */
-    }
-  }
-
-#services{
-
+#services {
   // tr th {
   //   text-align: left;
   //   padding: 5px 0;
@@ -86,27 +85,32 @@
     .service-divider {
       flex-grow: 1;
       height: 1px;
-      background: linear-gradient(to right, transparent, $primary-color, transparent);
+      background: linear-gradient(
+        to right,
+        transparent,
+        $primary-color,
+        transparent
+      );
       margin: 0 15px;
     }
-  }  
-  
-// Animation
-@keyframes fadeInUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
   }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 
-// Animating each item with a slight delay
-@for $i from 1 through 10 {
-  .pricing-item:nth-child(#{$i}) {
-    animation-delay: $i * (0.1s);
+  // Animation
+  @keyframes fadeInUp {
+    0% {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
-}
+
+  // Animating each item with a slight delay
+  @for $i from 1 through 10 {
+    .pricing-item:nth-child(#{$i}) {
+      animation-delay: $i * (0.1s);
+    }
+  }
 }

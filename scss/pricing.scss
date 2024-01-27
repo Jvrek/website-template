@@ -1,0 +1,66 @@
+#pricing {
+  padding: 50px;
+  gap: 40px;
+
+  .pricing-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    padding-left: 200px;
+    padding-right: 200px;
+    opacity: 0;
+    transform: translateY(20px);
+    animation: fadeInUp 1s ease forwards;
+
+    &:not(:last-child) {
+      margin-bottom: 20px;
+    }
+    .service-name,
+    .service-price {
+      font-size: 0.8rem;
+      color: $primary-color;
+    }
+    .service-divider {
+      flex-grow: 1;
+      height: 1px;
+      background: $primary-color; // Use the primary color variable here directly
+      margin: 0 15px;
+      position: relative; // Position relative to its normal position
+    }
+  }
+  .row {
+    text-align: center; // Center text for all rows
+
+    .category-list {
+      padding: 0; // Remove default padding
+      margin: 0;
+      list-style-type: none; // Remove list item bullets
+      text-align: center;
+
+      li {
+        display: inline-block; // Display list items side by side
+        margin: 0 10px; // Add some space between items
+
+        a {
+          text-decoration: none; // Optionally remove underline from links
+          color: #000; // Set a text color for links
+
+          &:hover {
+            text-decoration: underline;
+
+            color: #555; // Change link color on hover
+          }
+        }
+      }
+    }
+  }
+
+  .service-category {
+    display: none; // Start with all categories hidden
+  }
+
+  .service-category:target {
+    display: block; // Start with all categories hidden
+  }
+}
