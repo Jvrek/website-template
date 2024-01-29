@@ -1,0 +1,38 @@
+#as {
+  .top-row {
+    .top-list {
+      display: flex;
+      position: relative;
+      gap: 200px;
+    }
+  }
+
+  .main-row {
+    // font-size: 400vh;
+    font-size: 90px;
+    margin-left: 20px; // Adds space outside the border of the element
+    margin-right: 50px; // Adds space outside the border of the element
+    padding: 5px;
+    gap: 50px; // Adds space inside the border of the element
+    line-height: 1.5; // Increases the space between lines of text
+    letter-spacing: 90px;
+
+    img {
+      display: none;
+    }
+  }
+  .name {
+    font-size: 90px;
+  }
+  .photo img{
+    width: 100%;
+  }
+}
+
+.test-class{
+    background-color: teal;
+}
+.right-thing{
+    border-radius: 30px; /* Adjust this value to change the roundness */
+ 
+}
