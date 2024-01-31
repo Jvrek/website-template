@@ -1,61 +1,68 @@
 .cta-booksy-button {
-    padding: 10px 20px;
-    padding: 20px;
-    width: 100px;
-    background-color: #5d1049;
-    color: white;
-    border: none;
-    border-radius: 25px;
-    font-size: 1em;
-    text-align: center;
-    font-weight: bold;
-    cursor: pointer;
-    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
-    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-  
-    &:hover {
-      background-color: lighten(#5d1049, 10%);
-      transform: scale(1.05);
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
-      text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
-    }
-  
-    &:active {
-      transform: scale(0.95);
-      transition: transform 0.1s; /* Faster transition for a snappy feel */
-    }
-  
-    &:focus {
-      outline: none;
-    }
+  padding: 10px 20px;
+  padding: 20px;
+  width: 100px;
+  background-color: #5d1049;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  font-size: 1em;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  transition:
+    transform 0.3s,
+    box-shadow 0.3s,
+    background-color 0.3s;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+
+  &:hover {
+    background-color: lighten(#5d1049, 10%);
+    transform: scale(1.05);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.22);
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+  }
+
+  &:active {
+    transform: scale(0.95);
+    transition: transform 0.1s; /* Faster transition for a snappy feel */
+  }
+
+  &:focus {
+    outline: none;
+  }
 }
 
 @keyframes elastic {
-    0%, 100% { transform: scale(1); }
-    50% { transform: scale(1.2); }
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
 }
 
 .cta-booksy-button:active {
-    animation: elastic 0.6s ease;
+  animation: elastic 0.6s ease;
 }
 
-.cta-main-text{
-    text-align: center;
+.cta-main-text {
+  text-align: center;
 }
 
-.cta-description-text{
-    text-align: center;
+.cta-description-text {
+  text-align: center;
 }
 
 .img img {
   width: 100%;
   height: auto; /* Maintain aspect ratio */
   object-fit: cover; /* This will cover the area, possibly cropping the image */
-
 }
 
 .background-img {
-  background-image: url('../assets/img/circular_halftone_texture.jpg'); 
+  background-image: url('../assets/img/circular_halftone_texture.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
