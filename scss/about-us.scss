@@ -22,15 +22,6 @@
   }
 }
 
-.wrap .row {
-  margin-bottom: 30px; /* Space between rows */
-}
-
-/* Column styling for consistent padding */
-.wrap .col-xs-12 {
-  padding: 15px;
-}
-
 /* Styling for employee information */
 .employee-1,
 .employee-2 {
@@ -40,33 +31,4 @@
   padding: 20px; /* Padding inside the boxes */
   border-radius: 5px; /* Rounded corners */
   margin-bottom: 20px; /* Bottom margin */
-}
-
-/* Image styling for a modern look */
-.wrap img {
-  max-width: 100%; /* Responsive images */
-  height: auto; /* Maintain aspect ratio */
-  display: block; /* Remove inline spacing */
-  margin-top: 10px; /* Space above images */
-  border-radius: 5px; /* Rounded corners for images */
-}
-
-/* Special styling for the main text and contact sections */
-.hairdresser-main-text,
-.wrap .col-xs-12 > div:not(.employee-1):not(.employee-2) {
-  font-weight: bold; /* Bold font for emphasis */
-  // color: #007bff; /* Blue color for a modern touch */
-  text-transform: uppercase; /* Uppercase for a clean look */
-  margin-bottom: 10px; /* Bottom margin */
-}
-
-/* Responsive design adjustments */
-@media (max-width: 768px) {
-  .wrap .col-xs-12 {
-    padding: 10px;
-  }
-
-  .wrap .row {
-    margin-bottom: 20px;
-  }
 }

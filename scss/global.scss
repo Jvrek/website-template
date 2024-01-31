@@ -2,6 +2,10 @@
   border-radius: 15px;
 }
 
+.round-border-30 {
+  border-radius: 30px;
+}
+
 .wrap {
   max-width: 1200px;
 }
@@ -50,4 +54,8 @@
   &:focus {
     outline: none; // Removes outline to maintain modern aesthetics
   }
+}
+
+img {
+  width: 100%;
 }

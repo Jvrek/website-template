@@ -6,12 +6,6 @@
   margin-bottom: -50px; // Overlap the image with the service boxes
 }
 
-/* Position the service boxes to partially lay on the image */
-.wrap {
-  position: relative; /* Set relative positioning for the parent */
-  margin-top: -50px; /* Adjust this value as needed to overlay the service boxes on the image */
-}
-
 .service-box {
   background: #fff;
   padding: 20px;
@@ -34,13 +28,6 @@
   padding: 20px 0;
   background-color: #333;
   color: white;
-}
-
-/* Responsive grid adjustments for Bootstrap */
-@media (max-width: 767px) {
-  .wrap {
-    margin-top: -25px; /* Smaller overlay for smaller devices */
-  }
 }
 
 #services {
