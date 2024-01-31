@@ -18,7 +18,7 @@
   },
   "devDependencies": {
     "copy-webpack-plugin": "^11.0.0",
-    "css-loader": "^6.9.0",
+    "css-loader": "^6.10.0",
     "eslint": "^8.56.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.29.1",
@@ -35,6 +35,8 @@
     "webpack-merge": "^5.9.0"
   },
   "dependencies": {
-    "flexboxgrid": "^6.3.1"
+    "flexboxgrid": "^6.3.1",
+    "jquery": "^3.7.1",
+    "owl.carousel": "^2.3.4"
   }
 }
