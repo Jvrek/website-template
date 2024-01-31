@@ -61,3 +61,20 @@
 img {
   width: 100%;
 }
+
+.text-color-white{
+  color: white; // This sets the default text color to white for all text inside the container
+
+  // Targeting unordered lists (ul) and list items (li) specifically
+  ul, li {
+    color: white; // Sets text color to white
+
+    // If you want to make sure links (a) are also white
+    a {
+      color: white;
+      &:hover {
+        color: white; // You can change this to another color for hover effect if desired
+      }
+    }
+  }
+}
