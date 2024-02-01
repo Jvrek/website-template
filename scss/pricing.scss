@@ -3,6 +3,7 @@
   gap: 40px;
 
   .pricing-item {
+    color: white;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -18,10 +19,12 @@
     }
     .service-name,
     .service-price {
+      color: white;
       font-size: 0.8rem;
       color: $primary-color;
     }
     .service-divider {
+    color: white;
       flex-grow: 1;
       height: 1px;
       background: $primary-color; // Use the primary color variable here directly
@@ -33,23 +36,25 @@
     text-align: center; // Center text for all rows
 
     .category-list {
+      color: white;
       padding: 0; // Remove default padding
       margin: 0;
       list-style-type: none; // Remove list item bullets
       text-align: center;
 
-      li {
+      li, ul {
+        color: white;
         display: inline-block; // Display list items side by side
         margin: 0 10px; // Add some space between items
 
         a {
           text-decoration: none; // Optionally remove underline from links
-          color: #000; // Set a text color for links
+          color: white; // Set a text color for links
 
           &:hover {
             text-decoration: underline;
 
-            color: #555; // Change link color on hover
+            color: white; // Change link color on hover
           }
         }
       }
