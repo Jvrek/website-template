@@ -1,37 +1,55 @@
-body,
-html {
-  height: 100%;
-  margin: 0;
-}
-
-.content {
-  min-height: calc(100% - 50px); // Adjust 50px to the height of your footer
-  /* Rest of your content styles */
+.footer-hero {
+  background-image: url('/assets/img/eye-lashes-background.jpg');
+  background-position: center;
+  background-size: cover;
+  min-height: 40svh;
+  display: flex;
+  align-items: center;
+  .footer-hero-cta-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 footer {
-  font-family: 'Reason Regular', sans-serif;
+  min-height: 40vh;
+  display: flex;
+  align-items: center;
+  background-color: #000;
+  color: #fff;
+}
 
-  width: 100%;
-  min-height: 20vh;
-  background-color: #333; // Footer background color
-  color: white; // Footer text color
-  // text-align: center;
-  padding: 10px 0;
-
-  .menu {
-    text-align: center;
-
+.sub-footer {
+  font-size: 14px;
+  background-color: #000;
+  color: #fff;
+  .content {
+    min-height: 5svh;
     display: flex;
     justify-content: center;
-    gap: 42px;
+    align-items: center;
   }
-  p {
-    margin: 0; // Removes the default margin from <p>
-  }
+}
 
-  .copyright {
-    text-align: center;
-    padding-bottom: 80px;
+.mr-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-right: 100px;
+}
+
+.ml-container {
+  margin-top: 25px;
+  margin-bottom: 25px;
+  margin-left: 100px;
+}
+
+@media only screen and (max-width: 868px) {
+  .mr-container {
+    margin-right: 0px;
+  }
+  .ml-container {
+    margin-left: 0px;
   }
 }

@@ -24,7 +24,7 @@
       color: $primary-color;
     }
     .service-divider {
-    color: white;
+      color: white;
       flex-grow: 1;
       height: 1px;
       background: $primary-color; // Use the primary color variable here directly
@@ -42,7 +42,8 @@
       list-style-type: none; // Remove list item bullets
       text-align: center;
 
-      li, ul {
+      li,
+      ul {
         color: white;
         display: inline-block; // Display list items side by side
         margin: 0 10px; // Add some space between items
