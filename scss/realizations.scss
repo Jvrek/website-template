@@ -1,3 +1,12 @@
+#realizations{
+  background-color: rgba(0, 0, 0, 0.5); /* Red background with 30% opacity */
+
+  -webkit-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+  -moz-box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px -4px 3px rgba(50, 50, 50, 0.75);
+  box-shadow: 0px 0px 26px white;
+
+
 .rel-imgs img {
   width: 100%;
   height: auto; /* Maintain aspect ratio */
@@ -8,8 +17,13 @@
   width: 100%;
   height: auto;
   object-fit: contain;
+  box-shadow: 0px 0px 26px white;
+
 }
 
 .main-text {
   text-align: center;
+  color: white;
+  // font-size: 1em;
+}
 }
