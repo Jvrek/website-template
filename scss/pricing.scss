@@ -6,9 +6,9 @@
   box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 5); /* Subtle shadow */
 
   .pricing-item {
-  box-shadow: 20px rgba(0, 0, 0, 5); /* Subtle shadow */
-    
-  color: black;
+    box-shadow: 20px rgba(0, 0, 0, 5); /* Subtle shadow */
+
+    color: black;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -28,6 +28,7 @@
       color: $primary-color;
     }
     .service-divider {
+      color: white;
       flex-grow: 1;
       height: 1px;
       background: $primary-color; // Use the primary color variable here directly
@@ -46,6 +47,7 @@
 
       li,
       ul {
+        color: white;
         display: inline-block; // Display list items side by side
         margin: 0 10px; // Add some space between items
 
@@ -54,7 +56,6 @@
 
           &:hover {
             text-decoration: underline;
-
           }
         }
       }
