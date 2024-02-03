@@ -1,11 +1,13 @@
 .gtco-testimonials {
+  box-shadow:  20px rgba(0, 0, 0,5); /* Subtle shadow */
   position: relative;
-  margin-top: 30px;
 
+  margin-top: 30px;
+  background-color: rgba(0, 0, 0, 0.8); /* Red background with 30% opacity */
   h2 {
     font-size: 30px;
     text-align: center;
-    color: #333333;
+    color: #d4d4d4;
     margin-bottom: 50px;
   }
 

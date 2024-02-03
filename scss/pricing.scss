@@ -1,9 +1,13 @@
 #pricing {
   background-color: white;
+
   padding: 50px;
   gap: 40px;
+  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 5); /* Subtle shadow */
 
   .pricing-item {
+  box-shadow: 20px rgba(0, 0, 0, 5); /* Subtle shadow */
+    
   color: black;
     display: flex;
     align-items: center;
