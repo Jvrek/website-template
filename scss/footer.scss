@@ -1,8 +1,13 @@
 .footer-hero {
-  background-image: url('/assets/img/eye-lashes-background.jpg');
+  background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 0) 100%
+    ),
+    url('/assets/img/eye-lashes-background.jpg');
   background-position: center;
   background-size: cover;
-  min-height: 40svh;
+  min-height: 42svh;
   display: flex;
   align-items: center;
   .footer-hero-cta-container {
@@ -14,7 +19,7 @@
 }
 
 footer {
-  min-height: 40vh;
+  min-height: 45vh;
   display: flex;
   align-items: center;
   background-color: #000;

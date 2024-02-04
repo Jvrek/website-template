@@ -15,6 +15,25 @@ $light-gray-transparent: rgba($light-gray, 0.7);
 $white-transparent: rgba($white, 0.7);
 $white-transparent-light: rgba($white, 0.7);
 
+//gradients
+$gold-gradient: repeating-linear-gradient(
+  to right,
+  #a2682a 0%,
+  #be8c3c 8%,
+  #be8c3c 18%,
+  #d3b15f 27%,
+  #faf0a0 35%,
+  #ffffc2 40%,
+  #faf0a0 50%,
+  #d3b15f 58%,
+  #be8c3c 67%,
+  #b17b32 77%,
+  #bb8332 83%,
+  #d4a245 88%,
+  #e1b453 93%,
+  #a4692a 100%
+);
+
 // Primary, Secondary, Tertiary Colors
 $primary-color: $dark-black; // Główny kolor, np. dla ważnych elementów UI
 $secondary-color: $medium-gray; // Dodatkowy kolor, np. dla mniej ważnych elementów

@@ -1,0 +1,38 @@
+#aboutus {
+  backdrop-filter: blur(20px);
+  background: linear-gradient(
+    rgba(0, 0, 0, 1),
+    rgba(0, 0, 0, 0.2) 50%,
+    rgba(0, 0, 0, 1) 80%
+  );
+  padding-bottom: 30px;
+  .top-list {
+    display: flex;
+    position: relative;
+    justify-content: space-around;
+    gap: 15px;
+    flex-wrap: wrap;
+  }
+
+  img {
+    height: 100%;
+    border-radius: 30px;
+  }
+
+  .big-letters {
+    font-size: 90px;
+    line-height: 1.5; // Increases the space between lines of text
+    letter-spacing: 90px;
+    overflow-wrap: break-word;
+  }
+  .name {
+    font-size: 90px;
+  }
+}
+
+.test-class {
+  background-color: teal;
+}
+.right-thing {
+  border-radius: 30px; /* Adjust this value to change the roundness */
+}

@@ -28,34 +28,8 @@
   }
 }
 
-.cta-button {
-  padding: 10px 20px; // Adjust padding as needed
-  background-color: #5d1049; // A modern color, you can adjust this
-  color: white; // Text color
-  border: none; // No border for a modern look
-  border-radius: 25px; // Slightly rounded corners
-  font-size: 1em; // Adjust font size as needed
-  font-weight: bold; // Bold text
-  cursor: pointer; // Cursor changes to indicate button
-  transition:
-    background-color 0.3s,
-    transform 0.3s; // Smooth transition for hover effects
-
-  &:hover {
-    background-color: lighten(
-      #5d1049,
-      10%
-    ); // Lightens the button color on hover
-    transform: translateY(-2px); // Slight raise effect on hover
-  }
-
-  &:active {
-    transform: translateY(1px); // Pushes the button down on click
-  }
-
-  &:focus {
-    outline: none; // Removes outline to maintain modern aesthetics
-  }
+section {
+  overflow: hidden;
 }
 
 img {
@@ -81,18 +55,15 @@ img {
 }
 
 .main-bar {
-  box-shadow: 20px 20px 20px 20px rgba(0, 0, 0, 5); /* Subtle shadow */
-
   text-align: center;
   font-size: 24px;
-  padding: 20px 0;
-  background-color: #1e1c1c;
   color: white;
 }
 .rounded-button {
+  position: relative;
   background-color: transparent; // Transparent background
   color: white; // White text color
-  border: 1px solid white; // Thinner white border
+  border: 0px solid transparent; // Thinner white border
   border-radius: 30px; // More rounded corners for a smoother look
   padding: 10px 30px; // Padding adjusted for a wider button
   width: auto; // Adjusts width based on content and padding
@@ -101,10 +72,24 @@ img {
   font-weight: bold; // Bold text
   transition: all 0.7s ease; // Smooth transition for a subtle hover effect
   cursor: pointer; // Changes cursor to pointer on hover for better UX
-  box-shadow: none; // No shadow for a flat design
+  background-clip: padding-box;
+
+  &::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 30px;
+    padding: 2px;
+    background: $gold-gradient;
+    -webkit-mask:
+      linear-gradient(#fff 0 0) content-box,
+      linear-gradient(#fff 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+  }
 
   &:hover {
-    background-color: white; // White background on hover
+    background: white; // White background on hover
     color: rgba(
       0,
       0,
@@ -116,4 +101,28 @@ img {
 
 .center-text {
   text-align: center;
+}
+
+.mt-20 {
+  margin-top: 20px;
+}
+
+.header-text-container {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    text-align: center;
+    color: $header-text-color;
+  }
+
+  h2 {
+    text-align: center;
+    color: $header-subtext-color;
+  }
 }
