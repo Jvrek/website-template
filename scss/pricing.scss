@@ -19,7 +19,7 @@
       color: white;
       flex-grow: 1;
       height: 1px;
-      background: $gold-gradient;
+      background: $silver-gradient;
       margin: 0 15px;
       position: relative; // Position relative to its normal position
     }
@@ -38,7 +38,7 @@
         display: block;
         width: 0;
         height: 2px;
-        background: $gold-gradient;
+        background: $silver-gradient;
         transition: width 0.3s;
       }
 

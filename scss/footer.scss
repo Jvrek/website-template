@@ -58,3 +58,13 @@ footer {
     margin-left: 0px;
   }
 }
+
+.social-icon {
+  font-size: 2rem; /* Adjust this value to increase or decrease the size */
+  // margin: 0 15px; /* Optional: Add some space between icons */
+  color: #000; /* Optional: Change icon color */
+}
+
+.social-icon:hover {
+  color: #0077b5; /* Optional: Change color on hover */
+}
