@@ -1,6 +1,7 @@
 .gtco-testimonials {
   position: relative;
   background-color: black; /* Red background with 30% opacity */
+  padding-bottom: 20px;
   h2 {
     font-size: 30px;
     text-align: center;
@@ -24,13 +25,13 @@
       width: 10px;
       border-radius: 50%;
       display: block;
-      background: #ffd752;
+      background: #c9eaf3;
       margin: 0 5px;
     }
 
     .active {
       span {
-        background: #ffd752;
+        background: #577677;
         box-shadow: none;
         height: 12px;
         width: 12px;
@@ -41,7 +42,7 @@
 
   .card {
     background: #000000;
-    box-shadow: 0 0px 15px -5px #f8cc3c;
+    box-shadow: 0 0px 15px -5px #ffffff;
     margin: 0 20px;
     padding: 4px 10px;
     border-radius: 20px;
@@ -51,7 +52,7 @@
       max-width: 100px;
       border-radius: 50%;
       margin: 10px auto 10px;
-      box-shadow: 0 0px 20px -4px #f8cc3c;
+      box-shadow: 0 0px 20px -4px #ffffff;
       width: 100px;
       height: 100px;
     }
