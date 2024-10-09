@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Zapisz się do Newslettera</title>
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+  <!-- Compiled CSS -->
+  <!-- <link rel="stylesheet" href="css/main.css"> -->
+</head>
+<body>
+  <div class="newsletter-container">
+    <h2>10% zniżki dla zapisanych na Newsletter!</h2>
+    <p class="subheading">Obejmuje wszystkie usługi Let's Glow Beauty Salon</p>
+    <p>Zapisz się do newslettera, aby otrzymywać promocje, darmowe materiały, porady oraz newsy. Wystarczy podać email i wyrazić zgodę na otrzymywanie ofert marketingowych.</p>
+    <form id="newsletter-form" action="https://assets.mailerlite.com/jsonp/637083/forms/101638543013578328/subscribe" method="post">
+      <!-- Hidden Fields -->
+      <input type="hidden" name="ml-submit" value="1">
+      <input type="hidden" name="anticsrf" value="true">
+      
+      <!-- Anti-bot Field -->
+      <div style="position: absolute; left: -5000px;" aria-hidden="true">
+        <input type="text" name="ml-real" tabindex="-1" value="">
+      </div>
+      
+      <!-- Email Input -->
+      <div class="input-group">
+        <input type="email" name="fields[email]" placeholder="Wpisz swój email" required />
+      </div>
+      
+      <!-- Marketing Permissions -->
+      <div class="consent-group">
+        <input type="checkbox" id="marketing-permissions" name="gdpr[]" value="1" required>
+        <label for="marketing-permissions">Klikając „Zapisz się” wyrażam chęć zapisu do newslettera, w celu otrzymywania informacji marketingowych. Wiem, że zgodę w każdej chwili mogę odwołać.</label>
+      </div>
+      
+      <!-- Error Message Area -->
+      <p id="error-message" class="error-message" style="display: none;">Proszę zaznaczyć "Wyrażam zgodę" przed zapisaniem się.</p>
+      
+      <!-- Small Text Before Submit Button -->
+      <p class="small-text">
+        Administratorem Twoich danych osobowych jest LET'S GLOW BEAUTY SALON MONIKA DURMA<br>
+        NIP: 8661441113, REGON: 830406656
+      </p>
+      
+      <!-- Privacy Policy Link -->
+      <p class="small-text">
+        Zapoznaj się z naszą <a href="privacy-policy.html">Polityką prywatności</a> przed zapisaniem się.
+      </p>
+      
+      <!-- Submit Button -->
+      <button type="submit" id="submit-button">Zapisz się!</button>
+    </form>
+  </div>
+  <!-- Include Your JavaScript File -->
+  <script src="js/app.js"></script>
+</body>
+</html>

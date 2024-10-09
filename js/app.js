@@ -75,3 +75,30 @@ $('.category-list').on('click', 'a', function (e) {
   $('.service-category').not(targetId).hide('slow');
   lastClicked = targetId;
 });
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  const form = document.getElementById('newsletter-form');
+  const checkbox = document.getElementById('marketing-permissions');
+  const errorMessage = document.getElementById('error-message');
+
+  form.addEventListener('submit', function(event) {
+    // Check if the checkbox is not checked
+    if (!checkbox.checked) {
+      // Prevent form submission
+      event.preventDefault();
+
+      // Display the error message
+      errorMessage.style.display = 'block';
+
+      // Optionally, scroll to the error message
+      errorMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    } else {
+      // Hide the error message if previously displayed
+      errorMessage.style.display = 'none';
+
+      // Allow form submission to proceed
+      // No need to do anything here since the form will submit by default
+    }
+  });
+});

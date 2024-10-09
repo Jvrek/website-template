@@ -1,10 +1,10 @@
 .footer-hero {
   background-image: linear-gradient(
       to bottom,
-      rgba(0, 0, 0, 1) 10%,
+      rgba(0, 0, 0, 1) 0%,
       rgba(0, 0, 0, 0) 100%
     ),
-    url('/assets/img/eye-lashes-background.jpg');
+    url('/assets/img/footer-face.jpeg');
   background-position: center;
   background-size: cover;
   min-height: 42svh;
@@ -19,11 +19,12 @@
 }
 
 footer {
-  min-height: 45vh;
-  display: flex;
-  align-items: center;
+  /* Remove display: flex and align-items */
+  /* display: flex; */
+  /* align-items: center; */
   background-color: #000;
   color: #fff;
+  padding: 25px 0;
 }
 
 .sub-footer {
@@ -38,16 +39,12 @@ footer {
   }
 }
 
-.mr-container {
-  margin-top: 25px;
-  margin-bottom: 25px;
-  margin-right: 100px;
-}
-
+.mr-container,
 .ml-container {
   margin-top: 25px;
   margin-bottom: 25px;
-  margin-left: 100px;
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 @media only screen and (max-width: 868px) {
@@ -60,11 +57,22 @@ footer {
 }
 
 .social-icon {
-  font-size: 2rem; /* Adjust this value to increase or decrease the size */
-  // margin: 0 15px; /* Optional: Add some space between icons */
-  color: #000; /* Optional: Change icon color */
+  font-size: 2rem;
+  color: #fff; /* Change to white */
 }
 
 .social-icon:hover {
-  color: #0077b5; /* Optional: Change color on hover */
+  color: #ccc; /* Optional: Change color on hover */
+}
+
+footer h2,
+footer h4,
+footer p {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Ensure padding and borders are included in width calculations */
+*, *::before, *::after {
+  box-sizing: border-box;
 }
