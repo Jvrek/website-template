@@ -1,0 +1,132 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@1,400&display=swap');
+
+body {
+  background-color: #000;
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('/Users/dominikwawrzkiewicz/Projects/WEBPAGE-LETSGLOW/website-template/assets/img/contact-options-background.jpg');
+
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 1. Logo on the left with bigger paddings */
+.logo-header {
+  text-align: left;
+  padding-top: 60px;
+  padding-bottom: 40px;
+  padding-left: 40px;
+}
+
+.logo-header .logo-image {
+  max-width: 600px;
+  width: 90%;
+  height: auto;
+  display: block;
+  filter: invert(1);
+}
+
+/* 2. Bigger standing-person image */
+.standing-person-image {
+  max-width: 400px; /* Increased from 300px */
+  width: 100%;
+  height: auto;
+}
+
+.intro-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+.marketing-text {
+  flex: 1;
+  text-align: left;
+  font-size: 1.5em;
+  line-height: 1.5;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  color: #fff;
+  font-weight: normal;
+  margin-right: 20px;
+}
+
+/* 3. Buttons shorter and not as wide */
+.contact-options {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 20px 0;
+  
+}
+
+.contact-options .option {
+  margin: 10px;
+  width: auto;
+  max-width: 200px; /* Set a max width to make buttons shorter */
+  box-sizing: border-box;
+}
+
+.contact-options .option a {
+  /* Remove the existing background gradient */
+  /* background: linear-gradient(45deg, #c0c0c0, #e0e0e0); */
+  background: transparent;
+  color: #fff; /* Set text color to white */
+  padding: 15px 20px;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: none; /* Remove box-shadow if not needed */
+  text-align: center;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5); /* Optional: Add a subtle text shadow */
+
+  border: 2px solid #fff; /* Optional: Add a white border to make buttons stand out */
+}
+.contact-options .option a:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(224, 224, 224, 0.4);
+}
+
+.contact-options .option i {
+  font-size: 1.5em;
+  margin-right: 10px;
+}
+
+.contact-options .option span {
+  font-weight: 600;
+  font-size: 1em;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .intro-section {
+    flex-direction: column;
+    text-align: center;
+  }
+  .marketing-text {
+    margin-right: 0;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  .standing-person-image {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact-options .option {
+    width: 100%;
+    max-width: 200px;
+  }
+}
