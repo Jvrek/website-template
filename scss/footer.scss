@@ -7,14 +7,28 @@
     url('/assets/img/footer-face.jpeg');
   background-position: center;
   background-size: cover;
-  min-height: 42svh;
+  min-height: 55vh; /* Increased height */
   display: flex;
   align-items: center;
+
   .footer-hero-cta-container {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+  }
+}
+
+/* Responsive adjustments */
+@media only screen and (max-width: 768px) {
+  .footer-hero {
+    min-height: 65vh; /* Further increase for smaller screens */
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .footer-hero {
+    min-height: 75vh; /* Even more height for very small screens */
   }
 }
 
@@ -31,6 +45,7 @@ footer {
   font-size: 14px;
   background-color: #000;
   color: #fff;
+
   .content {
     min-height: 5svh;
     display: flex;
