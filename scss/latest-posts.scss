@@ -1,47 +1,78 @@
 #latest-posts {
-  background-color: black;
+  background-color: white;
 }
+
 .latest-img .image-container {
   position: relative;
   width: 100%;
+  min-height: 450px; // Adjust to match the height of the largest image
   overflow: hidden;
-}
-
-.latest-img img {
-  display: block;
-  width: 100%;
-  transition: filter 0.5s ease;
-}
-
-.latest-img .overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(0, 0, 0, 0);
-  width: 100%;
-  height: 100%;
-  transition: background-color 0.5s ease;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  opacity: 0;
-  transition: opacity 0.5s ease;
-}
+  align-items: center; // Center-aligns the image vertically if needed
+  justify-content: center; // Center-aligns the image horizontally if needed
 
-.latest-img .image-container:hover img {
-  filter: brightness(50%);
-}
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; // Ensures images cover the container area without distortion
+    filter: brightness(98%); // Darken images by default
+    transition: filter 0.5s ease;
+  }
 
-.latest-img .image-container:hover .overlay {
-  opacity: 1;
-  background-color: rgba(0, 0, 0, 0.5);
-}
+  // Stronger Vignette Effect
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 30%; // Increased height for a stronger vignette
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.7), transparent); // Darker overlay
+    transition: opacity 0.5s ease;
+    opacity: 0.95; // Increased opacity for a more intense effect
+  }
 
-.latest-img .text {
-  color: white;
-  margin: 0px;
-  text-align: center;
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 30%; // Increased height for a stronger vignette
+    background: linear-gradient(to top, rgba(0, 0, 0, 7), transparent); // Darker overlay
+    transition: opacity 0.5s ease;
+    opacity: 0.95; // Increased opacity for a more intense effect
+  }
+
+  &:hover img {
+    filter: brightness(50%); // Darker on hover for contrast with vignette
+  }
+
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+
+    &:hover {
+      opacity: 1;
+      background-color: rgba(0, 0, 0, 0.5);
+    }
+  }
+
+  .text {
+    color: white;
+    margin: 0;
+    text-align: center;
+  }
 }

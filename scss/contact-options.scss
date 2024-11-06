@@ -1,14 +1,23 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@1,400&display=swap');
-
 body {
   background-color: #000;
   color: #fff;
   font-family: 'Montserrat', sans-serif;
   margin: 0;
   padding: 0;
-  background-image: url('/Users/dominikwawrzkiewicz/Projects/WEBPAGE-LETSGLOW/website-template/assets/img/contact-options-background.jpg');
+  background-image: url('/Users/dominikwawrzkiewicz/Projects/WEBPAGE-LETSGLOW/website-template/assets/img/orhid.jpg');
+  background-size: cover; /* Makes the background image cover the entire viewport */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Ensures the image doesn’t tile */
+  background-attachment: fixed; /* Keeps the background fixed on scroll (optional) */
+}
 
+/* Responsive adjustments for mobile and smaller screens */
+@media (max-width: 768px) {
+  body {
+    background-attachment: scroll; /* Allows the background to scroll on mobile */
+  }
 }
 
 a {

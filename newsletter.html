@@ -7,11 +7,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
   <!-- Compiled CSS -->
   <!-- <link rel="stylesheet" href="css/main.css"> -->
+  <style>
+    /* Styling for the footer */
+    body, html {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    .newsletter-container {
+      flex: 1;
+      padding: 20px;
+    }
+    footer {
+      text-align: center;
+      font-size: 10px;
+      color: #aaa;
+      padding: 5px;
+      margin-top: auto;
+    }
+    footer a {
+      color: #aaa;
+      text-decoration: none;
+    }
+  </style>
 </head>
 <body>
   <div class="newsletter-container">
-    <h2>10% zniżki dla zapisanych na Newsletter!</h2>
-    <p class="subheading">Obejmuje wszystkie usługi Let's Glow Beauty Salon</p>
+    <h2>5% zniżki dla zapisanych na Newsletter!</h2>
+    <p class="subheading">Obejmuje jednorazowo wszystkie usługi Let's Glow Beauty Salon</p>
     <p>Zapisz się do newslettera, aby otrzymywać promocje, darmowe materiały, porady oraz newsy. Wystarczy podać email i wyrazić zgodę na otrzymywanie ofert marketingowych.</p>
     <form id="newsletter-form" action="https://assets.mailerlite.com/jsonp/637083/forms/101638543013578328/subscribe" method="post">
       <!-- Hidden Fields -->
@@ -52,6 +77,12 @@
       <button type="submit" id="submit-button">Zapisz się!</button>
     </form>
   </div>
+
+  <!-- Footer for attribution -->
+  <footer>
+    <p>Designed by <a href="https://www.freepik.com/free-photo/lovely-flowers-concept-with-elegant-style_3489710.htm#fromView=search&page=1&position=32&uuid=15e2145e-2068-4f51-b758-862a3fd5bf5c" target="_blank">Freepik</a></p>
+  </footer>
+
   <!-- Include Your JavaScript File -->
   <script src="js/app.js"></script>
 </body>
