@@ -1,7 +1,9 @@
 import '../scss/main.scss';
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel';
+
 var lastClicked;
+
 document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
   const menu = document.querySelector('.mobile-nav');
@@ -60,7 +62,7 @@ jQuery(function ($) {
   })();
 });
 
-//cenniki
+// Cenniki
 $('.category-list').on('click', 'a', function (e) {
   e.preventDefault();
   var targetId = $(this).attr('href');
@@ -76,13 +78,13 @@ $('.category-list').on('click', 'a', function (e) {
   lastClicked = targetId;
 });
 
-
-document.addEventListener('DOMContentLoaded', function() {
+// Newsletter Form Submission with Validation and Redirection
+document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('newsletter-form');
   const checkbox = document.getElementById('marketing-permissions');
   const errorMessage = document.getElementById('error-message');
 
-  form.addEventListener('submit', function(event) {
+  form.addEventListener('submit', async function (event) {
     // Check if the checkbox is not checked
     if (!checkbox.checked) {
       // Prevent form submission
@@ -98,7 +100,36 @@ document.addEventListener('DOMContentLoaded', function() {
       errorMessage.style.display = 'none';
 
       // Allow form submission to proceed
-      // No need to do anything here since the form will submit by default
+      event.preventDefault(); // Prevent default form submission for async handling
+
+      // Collect form data
+      const formData = new FormData(form);
+
+      try {
+        // Send the form data using Fetch API
+        const response = await fetch(form.action, {
+          method: form.method,
+          body: formData,
+          headers: {
+            Accept: 'application/json',
+          },
+        });
+
+        if (response.ok) {
+          // If submission is successful, redirect to the success page
+          window.location.href = 'newsletter-success-page.html';
+        } else {
+          // If there's an error, handle it appropriately
+          const errorMessageContent = await response.text();
+          console.error('Submission failed:', errorMessageContent);
+          errorMessage.style.display = 'block';
+          errorMessage.innerText = 'Wystąpił błąd podczas wysyłania. Spróbuj ponownie.';
+        }
+      } catch (error) {
+        console.error('Error during form submission:', error);
+        errorMessage.style.display = 'block';
+        errorMessage.innerText = 'Błąd połączenia. Spróbuj ponownie.';
+      }
     }
   });
 });
