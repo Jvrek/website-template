@@ -1,16 +1,14 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Playfair+Display:ital,wght@1,400&display=swap');
-body {
-  background-color: #000;
-  color: #fff;
-  font-family: 'Montserrat', sans-serif;
-  margin: 0;
-  padding: 0;
+
+.contact-options-page {
   background-image: url('../assets/img/orhid.jpg');
   background-size: cover; /* Makes the background image cover the entire viewport */
   background-position: center; /* Centers the image */
   background-repeat: no-repeat; /* Ensures the image doesn’t tile */
   background-attachment: fixed; /* Keeps the background fixed on scroll (optional) */
+  background-color: #000; /* Fallback color in case the image doesn't load */
+  color: #fff;
 }
 
 /* Responsive adjustments for mobile and smaller screens */
