@@ -9,7 +9,7 @@ module.exports = merge(common, {
   mode: 'production',
   plugins: [
     new MiniCssExtractPlugin({
-      filename: 'css/[name].[contenthash].css',
+      filename: 'css/[name].css',
     }),
     new HtmlWebpackPlugin({
       template: './index.html',
@@ -28,6 +28,11 @@ module.exports = merge(common, {
         { from: 'robots.txt', to: 'robots.txt' },
         { from: 'icon.png', to: 'icon.png' },
         { from: '404.html', to: '404.html' },
+        { from: 'contact-options.html', to: 'contact-options.html' },
+        { from: 'kosmetologia.html', to: 'kosmetologia.html' },
+        { from: 'fryzjerstwo.html', to: 'fryzjerstwo.html' },
+        { from: 'newsletter.html', to: 'newsletter.html' },
+        { from: 'privacy-policy.html', to: 'privacy-policy.html' },
         { from: 'site.webmanifest', to: 'site.webmanifest' },
       ],
     }),
@@ -35,11 +40,11 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /\.css$/i,
+        test: /.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        test: /\.scss$/,
+        test: /.scss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],
