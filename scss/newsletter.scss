@@ -1,9 +1,37 @@
+.newsl {
+/* Styling for the footer */
+body, html {
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.newsletter-container {
+  flex: 1;
+  padding: 20px;
+}
+footer {
+  text-align: center;
+  font-size: 10px;
+  color: #aaa;
+  padding: 5px;
+  margin-top: auto;
+}
+footer a {
+  color: #aaa;
+  text-decoration: none;
+}
+
+
+
 // Reset
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
+
 
 // Mixins
 @mixin transition($properties...) {
@@ -155,4 +183,5 @@ button[type="submit"] {
   .small-text {
     font-size: 0.9em;
   }
+}
 }
