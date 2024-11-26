@@ -6,14 +6,27 @@ var lastClicked;
 
 document.addEventListener('DOMContentLoaded', () => {
   const menuIcon = document.getElementById('menu-icon');
-  const menu = document.querySelector('.mobile-nav');
+  const mobileMenu = document.querySelector('.mobile-nav');
+  const mobileMenuLinks = document.querySelectorAll('.mobile-menu-list a');
 
+  // Funkcja do toggle'owania menu
+  const toggleMenu = () => {
+    menuIcon.classList.toggle('is-active');
+    mobileMenu.classList.toggle('is-active');
+  };
+
+  // Nasłuchiwanie kliknięcia na ikonę menu
   if (menuIcon) {
-    menuIcon.addEventListener('click', () => {
-      menuIcon.classList.toggle('is-active');
-      menu.classList.toggle('is-active');
-    });
+    menuIcon.addEventListener('click', toggleMenu);
   }
+
+  // Nasłuchiwanie kliknięć na wszystkie linki w menu mobilnym
+  mobileMenuLinks.forEach((link) => {
+    link.addEventListener('click', () => {
+      menuIcon.classList.remove('is-active');
+      mobileMenu.classList.remove('is-active');
+    });
+  });
 });
 
 jQuery(function ($) {

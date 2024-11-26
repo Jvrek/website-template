@@ -32,6 +32,10 @@ module.exports = merge(common, {
         { from: 'kosmetologia.html', to: 'kosmetologia.html' },
         { from: 'fryzjerstwo.html', to: 'fryzjerstwo.html' },
         { from: 'newsletter.html', to: 'newsletter.html' },
+        {
+          from: 'newsletter-success-page.html',
+          to: 'newsletter-success-page.html',
+        },
         { from: 'privacy-policy.html', to: 'privacy-policy.html' },
         { from: 'site.webmanifest', to: 'site.webmanifest' },
       ],
@@ -40,11 +44,11 @@ module.exports = merge(common, {
   module: {
     rules: [
       {
-        test: /.css$/i,
+        test: /\.css$/i,
         use: [MiniCssExtractPlugin.loader, 'css-loader'],
       },
       {
-        test: /.scss$/,
+        test: /\.scss$/,
         use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
       },
     ],

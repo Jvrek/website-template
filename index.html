@@ -23,8 +23,8 @@
         overflow: hidden;
       }
 
-      /* Container for images */
-      .container {
+      /* maincontainer for images */
+      .maincontainer {
         position: relative;
         width: 100%;
         height: 100%;
@@ -216,7 +216,7 @@
     </style>
   </head>
   <body>
-    <div class="container" id="container">
+    <div class="maincontainer" id="maincontainer">
       <div class="image image-a" data-href="kosmetologia.html">
         <img src="assets/img/kosmetologia.jpg" alt="Kosmetologia" />
         <div class="text">Kosmetologia</div>
@@ -232,28 +232,28 @@
 
     <script>
       const images = document.querySelectorAll('.image');
-      const container = document.getElementById('container');
+      const maincontainer = document.getElementById('maincontainer');
 
       images.forEach((image) => {
         // Handle hover events
         image.addEventListener('mouseenter', () => {
-          if (container.classList.contains('animating')) return;
+          if (maincontainer.classList.contains('animating')) return;
           image.classList.add('hovered');
-          container.classList.add('hover-active');
+          maincontainer.classList.add('hover-active');
         });
 
         image.addEventListener('mouseleave', () => {
-          if (container.classList.contains('animating')) return;
+          if (maincontainer.classList.contains('animating')) return;
           image.classList.remove('hovered');
-          container.classList.remove('hover-active');
+          maincontainer.classList.remove('hover-active');
         });
 
         // For touch devices
         image.addEventListener('touchstart', () => {
-          if (container.classList.contains('animating')) return;
+          if (maincontainer.classList.contains('animating')) return;
           images.forEach((img) => img.classList.remove('hovered'));
           image.classList.add('hovered');
-          container.classList.add('hover-active');
+          maincontainer.classList.add('hover-active');
         });
 
         // Prevent touchend from triggering click immediately
@@ -265,10 +265,10 @@
         // Click event
         image.addEventListener('click', function () {
           // Prevent multiple clicks
-          if (container.classList.contains('animating')) return;
+          if (maincontainer.classList.contains('animating')) return;
 
           // Add animating class
-          container.classList.add('animating');
+          maincontainer.classList.add('animating');
           this.classList.add('clicked');
 
           // Get the target URL
@@ -285,7 +285,7 @@
       document.addEventListener('touchstart', (e) => {
         if (!e.target.closest('.image')) {
           images.forEach((img) => img.classList.remove('hovered'));
-          container.classList.remove('hover-active');
+          maincontainer.classList.remove('hover-active');
         }
       });
     </script>
@@ -296,5 +296,6 @@
         }
       });
     </script>
+    <script src="js/app.js"></script>
   </body>
 </html>
