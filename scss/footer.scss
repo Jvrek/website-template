@@ -88,6 +88,8 @@ footer p {
 }
 
 /* Ensure padding and borders are included in width calculations */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }

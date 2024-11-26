@@ -22,12 +22,11 @@ module.exports = merge(common, {
   devtool: 'inline-source-map',
   devServer: {
     liveReload: true,
-    port: '9099', 
+    port: '9099',
     hot: true,
     open: true,
     static: ['./'],
-    host: '0.0.0.0', 
-    allowedHosts: 'all', 
-  }
-  
+    host: '0.0.0.0',
+    allowedHosts: 'all',
+  },
 });

@@ -83,7 +83,9 @@ document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('newsletter-form');
   const checkbox = document.getElementById('marketing-permissions');
   const errorMessage = document.getElementById('error-message');
-
+  if (!form) {
+    return;
+  }
   form.addEventListener('submit', async function (event) {
     // Check if the checkbox is not checked
     if (!checkbox.checked) {
@@ -123,7 +125,8 @@ document.addEventListener('DOMContentLoaded', function () {
           const errorMessageContent = await response.text();
           console.error('Submission failed:', errorMessageContent);
           errorMessage.style.display = 'block';
-          errorMessage.innerText = 'Wystąpił błąd podczas wysyłania. Spróbuj ponownie.';
+          errorMessage.innerText =
+            'Wystąpił błąd podczas wysyłania. Spróbuj ponownie.';
         }
       } catch (error) {
         console.error('Error during form submission:', error);

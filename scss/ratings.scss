@@ -1,122 +1,126 @@
 /* Ratings Section */
 .ratings-section {
-    position: relative;
-    padding: 50px 0;
-    background-color: #f9f9f9;
-    text-align: center;
-    overflow: visible; /* Allows shading to extend outside the section */
+  position: relative;
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  text-align: center;
+  overflow: visible; /* Allows shading to extend outside the section */
 }
 
 .ratings-section::before,
 .ratings-section::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    right: 0;
-    z-index: 1;
-    pointer-events: none; /* Ensure shading doesn’t block clicks */
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  pointer-events: none; /* Ensure shading doesn’t block clicks */
 }
 
 .ratings-section::before {
-    top: 0;
-    height: 150px; /* Shortened height for a shorter top overlay */
-    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 50%);
+  top: 0;
+  height: 150px; /* Shortened height for a shorter top overlay */
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0) 50%
+  );
 }
 
 .ratings-section::after {
-    bottom: -20px; /* Keeps it extending over the next section */
-    height: 100px; /* Longer height for a more prominent bottom overlay */
-    background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 30%);
+  bottom: -20px; /* Keeps it extending over the next section */
+  height: 100px; /* Longer height for a more prominent bottom overlay */
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0) 30%);
 }
 
 .ratings-section h2 {
-    font-size: 2.5em;
-    margin-bottom: 10px;
-    z-index: 2; /* Keeps the text above the shading */
+  font-size: 2.5em;
+  margin-bottom: 10px;
+  z-index: 2; /* Keeps the text above the shading */
 }
 
 .ratings-section p {
-    font-size: 1.2em;
-    color: #666;
-    margin-bottom: 40px;
-    z-index: 2;
+  font-size: 1.2em;
+  color: #666;
+  margin-bottom: 40px;
+  z-index: 2;
 }
 
 /* Rating Cards */
 .rating-cards {
-    display: flex;
-    justify-content: space-around;
-    flex-wrap: wrap;
-    z-index: 2; /* Cards should remain above the shading */
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  z-index: 2; /* Cards should remain above the shading */
 }
 
 .rating-card {
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 20px;
-    margin: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
-    text-align: center;
-    width: 90%;
-    max-width: 300px;
-    z-index: 2;
+  background-color: #fff;
+  border-radius: 10px;
+  padding: 20px;
+  margin: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+  text-align: center;
+  width: 90%;
+  max-width: 300px;
+  z-index: 2;
 }
 
 .rating-icon {
-    width: 12vw; /* Set an even larger width as a percentage of the viewport */
-    max-width: 100px; /* Increase the maximum width */
-    height: auto; /* Maintain aspect ratio */
-    margin-bottom: 1.5em; /* Adjust spacing */
+  width: 12vw; /* Set an even larger width as a percentage of the viewport */
+  max-width: 100px; /* Increase the maximum width */
+  height: auto; /* Maintain aspect ratio */
+  margin-bottom: 1.5em; /* Adjust spacing */
 }
-  
+
 /* Add media query for smaller devices */
 @media (max-width: 768px) {
-    .rating-icon {
-        width: 16vw; /* Increase the width significantly for mobile screens */
-        max-width: 80px; /* Adjust the maximum width for smaller devices */
-    }
+  .rating-icon {
+    width: 16vw; /* Increase the width significantly for mobile screens */
+    max-width: 80px; /* Adjust the maximum width for smaller devices */
+  }
 }
 
 .rating-card:hover {
-    transform: translateY(-10px);
+  transform: translateY(-10px);
 }
 
 .rating-card i {
-    font-size: 3em;
-    color: #919191;
-    margin-bottom: 10px;
+  font-size: 3em;
+  color: #919191;
+  margin-bottom: 10px;
 }
 
 .rating-card h3 {
-    font-size: 2.2em;
-    margin: 10px 0;
-    color: #333;
+  font-size: 2.2em;
+  margin: 10px 0;
+  color: #333;
 }
 
 .rating-card p {
-    font-size: 1.1em;
-    color: #777;
+  font-size: 1.1em;
+  color: #777;
 }
 
 @media (max-width: 768px) {
-    .rating-card {
-        width: 100%;
-        max-width: none;
-    }
+  .rating-card {
+    width: 100%;
+    max-width: none;
+  }
 }
 
 .rating-cards a {
-    text-decoration: none;
-    color: inherit;
+  text-decoration: none;
+  color: inherit;
 }
 
 .rating-cards a .rating-card {
-    display: block;
-    width: 100%;
-    height: 100%;
+  display: block;
+  width: 100%;
+  height: 100%;
 }
 
 .center-text-ratings {
-    color: black;
+  color: black;
 }

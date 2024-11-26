@@ -36,20 +36,20 @@ $white-transparent-light: rgba($white, 0.7);
 
 $silver-gradient: repeating-linear-gradient(
   to right,
-  #c0c0c0 0%,    /* Silver */
-  #d9d9d9 8%,    /* Lighter silver */
-  #d9d9d9 18%,   /* Lighter silver */
-  #e5e5e5 27%,   /* Almost white */
-  #f2f2f2 35%,   /* Very light silver */
-  #ffffff 40%,   /* White */
-  #f2f2f2 50%,   /* Very light silver */
-  #e5e5e5 58%,   /* Almost white */
-  #d9d9d9 67%,   /* Lighter silver */
-  #c2c2c2 77%,   /* Medium silver */
-  #bfbfbf 83%,   /* Medium-dark silver */
-  #a6a6a6 88%,   /* Darker silver */
-  #999999 93%,   /* Even darker silver */
-  #7f7f7f 100%   /* Dark silver */
+  #c0c0c0 0%,
+  /* Silver */ #d9d9d9 8%,
+  /* Lighter silver */ #d9d9d9 18%,
+  /* Lighter silver */ #e5e5e5 27%,
+  /* Almost white */ #f2f2f2 35%,
+  /* Very light silver */ #ffffff 40%,
+  /* White */ #f2f2f2 50%,
+  /* Very light silver */ #e5e5e5 58%,
+  /* Almost white */ #d9d9d9 67%,
+  /* Lighter silver */ #c2c2c2 77%,
+  /* Medium silver */ #bfbfbf 83%,
+  /* Medium-dark silver */ #a6a6a6 88%,
+  /* Darker silver */ #999999 93%,
+  /* Even darker silver */ #7f7f7f 100% /* Dark silver */
 );
 // Primary, Secondary, Tertiary Colors
 $primary-color: $dark-black; // Główny kolor, np. dla ważnych elementów UI
