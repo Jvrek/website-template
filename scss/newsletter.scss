@@ -1,15 +1,13 @@
-/* Reset styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Newsletter Page Styles */
+.newsletter-page {
+  /* Reset styles for newsletter page */
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
 
-/* Body and HTML styles */
-body,
-html {
-  margin: 0;
-  padding: 0;
+  /* Body and HTML styles */
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -19,16 +17,16 @@ html {
 }
 
 /* Newsletter Container */
-.newsletter-container {
+.newsletter-page .newsletter-container {
   flex: 1;
   max-width: 800px;
   margin: 50px auto;
   padding: 90px 30px 40px 30px;
-  background-color: #000000;
   text-align: center;
 }
 
-.newsletter-container h2 {
+/* Heading Styles */
+.newsletter-page .newsletter-container h2 {
   font-size: 2em;
   color: #ffffff;
   font-weight: bold;
@@ -43,41 +41,43 @@ html {
   display: inline-block;
 }
 
-.newsletter-container .subheading {
+/* Subheading */
+.newsletter-page .newsletter-container .subheading {
   font-size: 1.2em;
   color: #ffffff;
   margin-bottom: 1.5em;
 }
 
-.newsletter-container p {
+/* Paragraph Styles */
+.newsletter-page .newsletter-container p {
   font-size: 1em;
   line-height: 1.6;
   margin-bottom: 1.5em;
 }
 
-.newsletter-container a {
+.newsletter-page .newsletter-container a {
   color: #ffffff;
   text-decoration: none;
 }
 
-.newsletter-container a:hover {
+.newsletter-page .newsletter-container a:hover {
   text-decoration: underline;
 }
 
 /* Form Styles */
-form {
+.newsletter-page form {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-.input-group {
+.newsletter-page .input-group {
   width: 100%;
   margin-bottom: 1em;
 }
 
-.input-group input[type='email'],
-.input-group input[type='tel'] {
+.newsletter-page .input-group input[type='email'],
+.newsletter-page .input-group input[type='tel'] {
   width: 100%;
   padding: 15px;
   border: 1px solid #e4e4e4;
@@ -86,42 +86,42 @@ form {
   outline: none;
 }
 
-.input-group input[type='email']:focus,
-.input-group input[type='tel']:focus {
+.newsletter-page .input-group input[type='email']:focus,
+.newsletter-page .input-group input[type='tel']:focus {
   border-color: #ffffff;
   box-shadow: 0 0 5px rgba(255, 255, 255, 0.5);
 }
 
 /* Consent Group */
-.consent-group {
+.newsletter-page .consent-group {
   width: 100%;
   text-align: left;
   margin-bottom: 1em;
 }
 
-.consent-group input[type='checkbox'] {
+.newsletter-page .consent-group input[type='checkbox'] {
   margin-right: 10px;
 }
 
-.consent-group label {
+.newsletter-page .consent-group label {
   font-weight: bold;
 }
 
-.consent-group .consent-text {
+.newsletter-page .consent-group .consent-text {
   font-size: 0.9em;
   margin-top: 0.5em;
   color: #bebebe;
 }
 
 /* Small Text */
-.small-text {
+.newsletter-page .small-text {
   font-size: 0.8em;
   color: #545454;
   margin-bottom: 1em;
 }
 
 /* Submit Button */
-button[type='submit'] {
+.newsletter-page button[type='submit'] {
   background-color: #ffffff;
   color: #000000;
   padding: 15px 30px;
@@ -132,12 +132,12 @@ button[type='submit'] {
   transition: all 0.3s ease;
 }
 
-button[type='submit']:hover {
+.newsletter-page button[type='submit']:hover {
   background-color: #e0e0e0;
 }
 
 /* Error Message */
-.error-message {
+.newsletter-page .error-message {
   color: red;
   font-weight: bold;
   margin-bottom: 1em;
@@ -145,7 +145,7 @@ button[type='submit']:hover {
 }
 
 /* Footer */
-footer {
+.newsletter-page footer {
   text-align: center;
   font-size: 10px;
   color: #aaa;
@@ -153,28 +153,28 @@ footer {
   margin-top: auto;
 }
 
-footer a {
+.newsletter-page footer a {
   color: #aaa;
   text-decoration: none;
 }
 
 /* Responsive Design */
 @media (max-width: 800px) {
-  .newsletter-container {
+  .newsletter-page .newsletter-container {
     padding: 30px 20px;
   }
 
-  .newsletter-container h2 {
+  .newsletter-page .newsletter-container h2 {
     font-size: 1.8em;
   }
 
-  .newsletter-container .subheading {
+  .newsletter-page .newsletter-container .subheading {
     font-size: 1em;
   }
 
-  .newsletter-container p,
-  .consent-group .consent-text,
-  .small-text {
+  .newsletter-page .newsletter-container p,
+  .newsletter-page .consent-group .consent-text,
+  .newsletter-page .small-text {
     font-size: 0.9em;
   }
 }
