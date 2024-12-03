@@ -2,7 +2,7 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <title>Let's glow beauty salon</title>
+    <title>Let's Glow Beauty Salon</title>
     <!-- Meta viewport tag for mobile responsiveness -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -242,13 +242,6 @@
         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
       }
 
-      #popup-logo {
-        position: absolute;
-        top: 20px;
-        left: 20px;
-        width: 100px;
-      }
-
       #popup-close {
         position: absolute;
         top: 20px;
@@ -261,7 +254,7 @@
       }
 
       #popup-message {
-        margin-top: 80px; /* Adjust to make room for logo and close button */
+        margin-top: 20px;
         font-size: 1.2em;
         line-height: 1.5;
         font-weight: 500;
@@ -317,12 +310,6 @@
           padding: 30px 15px;
         }
 
-        #popup-logo {
-          width: 80px;
-          top: 10px;
-          left: 10px;
-        }
-
         #popup-close {
           top: 10px;
           right: 10px;
@@ -330,7 +317,7 @@
         }
 
         #popup-message {
-          margin-top: 60px;
+          margin-top: 10px;
           font-size: 1em;
         }
 
@@ -365,20 +352,20 @@
       </div>
       <div class="divider"></div>
       <!-- Logo Text in the Middle -->
-      <div class="logo">Let's glow beauty salon</div>
+      <div class="logo">Let's Glow Beauty Salon</div>
     </div>
 
     <!-- Popup Overlay -->
     <div id="popup-overlay">
       <div id="popup-content">
-        <img src="assets/img/logo.png" alt="Logo" id="popup-logo" />
+        <!-- Removed the logo image here -->
         <button id="popup-close">&times;</button>
         <div id="popup-message">
-          <h2>🎉 Otrzymaj 20% zniżki na pierwszą wizytę!</h2>
+          <h2>🎉 Otrzymaj jednorazowo 10% zniżki na masaż Kobido!</h2>
           <p>Zapisz się teraz, oferta wygasa za:</p>
         </div>
         <div id="popup-countdown">
-          <span class="count-number" id="days">00</span>d
+          <span class="count-number" id="days">0</span>d
           <span class="count-number" id="hours">00</span>h
           <span class="count-number" id="minutes">00</span>m
           <span class="count-number" id="seconds">00</span>s
@@ -461,44 +448,42 @@
     <!-- Popup JavaScript -->
     <script>
       // Countdown Timer
-      function initializeCountdown(endDate) {
-        let days, hours, minutes, seconds;
-
-        endDate = new Date(endDate).getTime();
+      function initializeCountdown() {
+        // Set the target end date to January 1st, 2025
+        const endDate = new Date('2025-01-01T00:00:00').getTime();
 
         if (isNaN(endDate)) return;
 
-        setInterval(calculate, 1000);
+        let countdownTimer = setInterval(calculate, 1000);
 
         function calculate() {
           let startDate = new Date().getTime();
           let timeRemaining = parseInt((endDate - startDate) / 1000);
 
           if (timeRemaining >= 0) {
-            days = parseInt(timeRemaining / 86400);
+            let days = parseInt(timeRemaining / 86400);
             timeRemaining = timeRemaining % 86400;
 
-            hours = parseInt(timeRemaining / 3600);
+            let hours = parseInt(timeRemaining / 3600);
             timeRemaining = timeRemaining % 3600;
 
-            minutes = parseInt(timeRemaining / 60);
-            seconds = parseInt(timeRemaining % 60);
+            let minutes = parseInt(timeRemaining / 60);
+            let seconds = parseInt(timeRemaining % 60);
 
-            document.getElementById('days').innerHTML = ('0' + days).slice(-2);
+            document.getElementById('days').innerHTML = days;
             document.getElementById('hours').innerHTML = ('0' + hours).slice(-2);
             document.getElementById('minutes').innerHTML = ('0' + minutes).slice(-2);
             document.getElementById('seconds').innerHTML = ('0' + seconds).slice(-2);
           } else {
             // Time is up
+            clearInterval(countdownTimer);
             document.getElementById('popup-countdown').innerHTML = '⏰ Oferta wygasła';
           }
         }
       }
 
-      // Initialize countdown to a future date (e.g., 7 days from now)
-      const futureDate = new Date();
-      futureDate.setDate(futureDate.getDate() + 7);
-      initializeCountdown(futureDate);
+      // Initialize countdown
+      initializeCountdown();
 
       // Show Popup on Page Load
       window.addEventListener('load', function () {
