@@ -6,9 +6,9 @@
     <!-- Meta viewport tag for mobile responsiveness -->
     <link rel="icon" href="/favicon.ico" sizes="any" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- Google Font -->
+    <!-- Google Fonts -->
     <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Poppins:wght@400;700&family=Roboto+Mono&display=swap"
       rel="stylesheet"
     />
     <style>
@@ -21,7 +21,7 @@
         font-family: 'Montserrat', sans-serif;
         background-color: #1a1a1a;
         color: #fff;
-        overflow: hidden;
+        overflow: hidden; /* Keep overflow hidden */
       }
 
       /* maincontainer for images */
@@ -214,6 +214,143 @@
           top: 40%;
         }
       }
+
+      /* Popup Styles */
+      #popup-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7); /* Semi-transparent background */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 9999; /* Higher than other elements */
+      }
+
+      #popup-content {
+        position: relative;
+        max-width: 600px;
+        width: 90%;
+        padding: 40px 20px;
+        background-color: #1a1a1a; /* Match the page background */
+        color: #fff; /* White text */
+        text-align: center;
+        font-family: 'Poppins', sans-serif;
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+      }
+
+      #popup-logo {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        width: 100px;
+      }
+
+      #popup-close {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        background: none;
+        border: none;
+        color: #fff;
+        font-size: 2em;
+        cursor: pointer;
+      }
+
+      #popup-message {
+        margin-top: 80px; /* Adjust to make room for logo and close button */
+        font-size: 1.2em;
+        line-height: 1.5;
+        font-weight: 500;
+      }
+
+      #popup-message h2 {
+        font-size: 1.8em;
+        margin-bottom: 10px;
+      }
+
+      #popup-message p {
+        font-size: 1.2em;
+      }
+
+      #popup-countdown {
+        margin-top: 20px;
+        font-size: 2.5em;
+        letter-spacing: 2px;
+        font-family: 'Roboto Mono', monospace;
+      }
+
+      .count-number {
+        color: #ff4b2b; /* Accent color */
+        font-weight: bold;
+      }
+
+      #popup-button {
+        margin-top: 30px;
+        padding: 15px 30px;
+        background: linear-gradient(45deg, #ff416c, #ff4b2b);
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        font-size: 1.2em;
+        font-weight: bold;
+        transition: all 0.3s ease;
+        display: inline-flex;
+        align-items: center;
+      }
+
+      #popup-button:hover {
+        transform: scale(1.05);
+      }
+
+      #popup-button .emoji {
+        margin-right: 10px;
+        font-size: 1.5em;
+      }
+
+      @media (max-width: 768px) {
+        #popup-content {
+          padding: 30px 15px;
+        }
+
+        #popup-logo {
+          width: 80px;
+          top: 10px;
+          left: 10px;
+        }
+
+        #popup-close {
+          top: 10px;
+          right: 10px;
+          font-size: 1.5em;
+        }
+
+        #popup-message {
+          margin-top: 60px;
+          font-size: 1em;
+        }
+
+        #popup-message h2 {
+          font-size: 1.5em;
+        }
+
+        #popup-message p {
+          font-size: 1em;
+        }
+
+        #popup-countdown {
+          font-size: 2em;
+        }
+
+        #popup-button {
+          font-size: 1em;
+        }
+      }
+      /* End Popup Styles */
     </style>
   </head>
   <body>
@@ -230,6 +367,28 @@
       <!-- Logo Text in the Middle -->
       <div class="logo">Let's glow beauty salon</div>
     </div>
+
+    <!-- Popup Overlay -->
+    <div id="popup-overlay">
+      <div id="popup-content">
+        <img src="assets/img/logo.png" alt="Logo" id="popup-logo" />
+        <button id="popup-close">&times;</button>
+        <div id="popup-message">
+          <h2>🎉 Otrzymaj 20% zniżki na pierwszą wizytę!</h2>
+          <p>Zapisz się teraz, oferta wygasa za:</p>
+        </div>
+        <div id="popup-countdown">
+          <span class="count-number" id="days">00</span>d
+          <span class="count-number" id="hours">00</span>h
+          <span class="count-number" id="minutes">00</span>m
+          <span class="count-number" id="seconds">00</span>s
+        </div>
+        <button id="popup-button">
+          <span class="emoji">💌</span> Zapisz się teraz
+        </button>
+      </div>
+    </div>
+    <!-- End Popup Overlay -->
 
     <script>
       const images = document.querySelectorAll('.image');
@@ -290,6 +449,7 @@
         }
       });
     </script>
+
     <script>
       window.addEventListener('pageshow', function (event) {
         if (event.persisted) {
@@ -297,6 +457,66 @@
         }
       });
     </script>
+
+    <!-- Popup JavaScript -->
+    <script>
+      // Countdown Timer
+      function initializeCountdown(endDate) {
+        let days, hours, minutes, seconds;
+
+        endDate = new Date(endDate).getTime();
+
+        if (isNaN(endDate)) return;
+
+        setInterval(calculate, 1000);
+
+        function calculate() {
+          let startDate = new Date().getTime();
+          let timeRemaining = parseInt((endDate - startDate) / 1000);
+
+          if (timeRemaining >= 0) {
+            days = parseInt(timeRemaining / 86400);
+            timeRemaining = timeRemaining % 86400;
+
+            hours = parseInt(timeRemaining / 3600);
+            timeRemaining = timeRemaining % 3600;
+
+            minutes = parseInt(timeRemaining / 60);
+            seconds = parseInt(timeRemaining % 60);
+
+            document.getElementById('days').innerHTML = ('0' + days).slice(-2);
+            document.getElementById('hours').innerHTML = ('0' + hours).slice(-2);
+            document.getElementById('minutes').innerHTML = ('0' + minutes).slice(-2);
+            document.getElementById('seconds').innerHTML = ('0' + seconds).slice(-2);
+          } else {
+            // Time is up
+            document.getElementById('popup-countdown').innerHTML = '⏰ Oferta wygasła';
+          }
+        }
+      }
+
+      // Initialize countdown to a future date (e.g., 7 days from now)
+      const futureDate = new Date();
+      futureDate.setDate(futureDate.getDate() + 7);
+      initializeCountdown(futureDate);
+
+      // Show Popup on Page Load
+      window.addEventListener('load', function () {
+        document.getElementById('popup-overlay').style.display = 'flex';
+      });
+
+      // Close Popup
+      document.getElementById('popup-close').addEventListener('click', function () {
+        document.getElementById('popup-overlay').style.display = 'none';
+      });
+
+      // "Zapisz się teraz" Button Click
+      document.getElementById('popup-button').addEventListener('click', function () {
+        window.location.href = 'newsletter.html';
+      });
+    </script>
+    <!-- End Popup JavaScript -->
+
     <script src="js/app.js"></script>
   </body>
 </html>
