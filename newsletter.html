@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="pl" class="newsl">
+<html lang="pl">
   <head>
     <meta charset="UTF-8" />
     <title>Zapisz się do Newslettera</title>
@@ -8,8 +8,10 @@
       href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap"
       rel="stylesheet"
     />
-    <!-- Compiled CSS -->
-    <!-- <link rel="stylesheet" href="css/main.css"> -->
+    <!-- Include the CSS directly in the head -->
+    <style>
+      /* [Updated CSS will go here] */
+    </style>
   </head>
   <body>
     <div class="newsletter-container">
@@ -19,8 +21,8 @@
       </p>
       <p>
         Zapisz się do newslettera, aby otrzymywać promocje, darmowe materiały,
-        porady oraz newsy. Wystarczy podać email i wyrazić zgodę na otrzymywanie
-        ofert marketingowych.
+        porady oraz newsy. Wystarczy podać email, numer telefonu i wyrazić zgodę
+        na otrzymywanie ofert marketingowych.
       </p>
       <form
         id="newsletter-form"
@@ -42,6 +44,17 @@
             type="email"
             name="fields[email]"
             placeholder="Wpisz swój email"
+            required
+          />
+        </div>
+
+        <!-- Phone Number Input -->
+        <div class="input-group">
+          <input
+            type="tel"
+            name="fields[phone]"
+            placeholder="Wpisz swój numer telefonu"
+            inputmode="tel"
             required
           />
         </div>
@@ -79,8 +92,7 @@
           Zapoznaj się z naszą
           <a href="privacy-policy.html">Polityką prywatności</a> przed
           zapisaniem się.
-          <br>*inne promocje nie łączą się z promocją za zapis do newsletter'a
-          
+          <br />*inne promocje nie łączą się z promocją za zapis do newsletter'a
         </p>
 
         <!-- Submit Button -->
