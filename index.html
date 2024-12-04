@@ -487,17 +487,17 @@
 
       // Show Popup on Page Load
       window.addEventListener('load', function () {
-        document.getElementById('popup-overlay').style.display = 'flex';
+          document.getElementById('popup-overlay').style.display = 'flex';
       });
-
+      
       // Close Popup
       document.getElementById('popup-close').addEventListener('click', function () {
-        document.getElementById('popup-overlay').style.display = 'none';
+          document.getElementById('popup-overlay').style.display = 'none';
       });
-
+      
       // "Zapisz się teraz" Button Click
       document.getElementById('popup-button').addEventListener('click', function () {
-        window.location.href = 'newsletter.html';
+          window.open('https://www.facebook.com/p/Lets-Glow-Beauty-Salon-100090762961737/', '_blank');
       });
     </script>
     <!-- End Popup JavaScript -->

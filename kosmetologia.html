@@ -93,6 +93,20 @@
       </div>
     </header>
 
+    <!-- Newsletter Popup -->
+    <div class="newsletter-overlay" id="newsletterOverlay">
+      <div class="newsletter-popup">
+        <button class="close-popup" id="closePopup">×</button>
+        <h2>Zarejestruj się do Newslettera Let's glow!</h2>
+        <p>
+          Otrzymaj <strong>5% zniżki</strong> na następny zabieg! Bądź na bieżąco
+          z naszymi promocjami i nowościami.
+        </p>
+        <button class="rounded-button" id="popupSignupButton">Zapisz się</button>
+      </div>
+    </div>
+
+
     <section id="services">
       <div class="full-width-wrap">
         <div class="row">
@@ -656,8 +670,7 @@
                       target="_blank"
                       >Mickiewicza 47,<br />
                       11-500 Giżycko<br />
-                      Na przeciwko galerii Batory</a
-                    >
+                      </a>
                   </p>
                 </div>
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
@@ -709,6 +722,23 @@
                   window.location.href = 'newsletter.html';
                 });
             </script>
+    <script>
+      window.onload = function () {
+        setTimeout(() => {
+          document.getElementById('newsletterOverlay').style.display = 'block';
+          document.body.classList.add('show-popup');
+        }, 3000); // Show after 3 seconds
+      };
+
+      document.getElementById('closePopup').addEventListener('click', function () {
+        document.getElementById('newsletterOverlay').style.display = 'none';
+        document.body.classList.remove('show-popup');
+      });
+
+      document.getElementById('popupSignupButton').addEventListener('click', function () {
+        window.location.href = 'newsletter.html';
+      });
+    </script>
           </div>
         </div>
       </div>
