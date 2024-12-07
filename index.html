@@ -282,8 +282,8 @@
       }
 
       #popup-button {
-        margin-top: 30px;
         padding: 15px 30px;
+        margin-top: 30px;
         background: linear-gradient(45deg, #ff416c, #ff4b2b);
         color: #fff;
         border: none;
@@ -305,38 +305,33 @@
         font-size: 1.5em;
       }
 
-      @media (max-width: 768px) {
-        #popup-content {
-          padding: 30px 15px;
-        }
-
-        #popup-close {
-          top: 10px;
-          right: 10px;
-          font-size: 1.5em;
-        }
-
-        #popup-message {
-          margin-top: 10px;
-          font-size: 1em;
-        }
-
-        #popup-message h2 {
-          font-size: 1.5em;
-        }
-
-        #popup-message p {
-          font-size: 1em;
-        }
-
-        #popup-countdown {
-          font-size: 2em;
-        }
-
-        #popup-button {
-          font-size: 1em;
-        }
+      @media (max-width: 480px) {
+      #popup-content {
+        max-width: 300px; /* Smaller width */
+        padding: 20px 10px; /* Reduced padding */
       }
+    
+      #popup-message h2 {
+        font-size: 1.2em; /* Smaller heading */
+      }
+    
+      #popup-message p {
+        font-size: 0.9em; /* Smaller paragraph text */
+      }
+    
+      #popup-countdown {
+        font-size: 1.5em; /* Smaller countdown text */
+      }
+    
+      #popup-button {
+        font-size: 0.9em; /* Smaller button text */
+        padding: 10px 20px; /* Adjust padding */
+      }
+    
+      #popup-button .emoji {
+        font-size: 1.2em; /* Smaller emoji */
+      }
+    }
       /* End Popup Styles */
     </style>
   </head>
